@@ -1,0 +1,57 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    background: linear-gradient(to bottom right, #d9dcdf, #969ca1);
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#main #top-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+#main .markers-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#main .markers-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.marker {
+    width: 30px;
+    height: 30px;
+    background-image: url('./assets/marker_red.png');
+}
+
+.marker.green {
+    background-image: url('./assets/marker_green.png');
+}
+
+.marker.hide {
+    background: none;
+}
+
+#countdown {
+    position: absolute;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 4.3em;
+    top: 38%;
+    text-align: center;
+    width: 100%;
+}
