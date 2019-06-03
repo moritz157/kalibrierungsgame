@@ -64,6 +64,10 @@ function end() {
     retryButton.innerHTML = "NOCHMAL"
     retryButton.addEventListener("click", init)
     topText.appendChild(retryButton)
+
+    let clickPrecisions = [];
+    for(let click of tempPrecision) { clickPrecisions.push(click.off_diagonal) }
+    sendData('', time, clickPrecisions);
 }
 
 /**
@@ -87,7 +91,7 @@ function step(i = 0) {
         mark.classList.remove("green")
         mark.classList.remove("show")
 
-        playSound("./assets/pling.mp3")
+        playSound("./assets/ding.mp3")
 
         tempPrecision.push(calculateClickPrecision(e))
 
@@ -173,6 +177,31 @@ function calculateScore(time) {
     // Score
     return Math.round(precisionScore * timeScore)
     
+}
+
+/**
+ * Sendet die Spieldaten an das PHP-Backend
+ * @param {String} username Der Nutzername
+ * @param {Number} time Zeit, die der Spieler gebraucht hat
+ * @param {Number[]} click_precisions Präzisionswerte aller Klicks
+ */
+function sendData(username, time, clickPrecisions) {
+    const Http = new XMLHttpRequest();
+    const url='submitGame.php';
+    Http.open("POST", url);
+
+    var formData = new FormData();
+    clickPrecisions.forEach((click, i) => {
+        formData.append('click_'+(i+1), click);
+    })
+
+    formData.append('user', username);
+    formData.append('time', time);
+    Http.send(formData);
+
+    Http.onreadystatechange = (e) => {
+        console.log(Http.responseText)
+    }
 }
 
 // starte Game wenn geklickt wird
