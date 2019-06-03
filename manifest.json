@@ -1,0 +1,32 @@
+{
+    "name": "UB App",
+    "short_name": "UB App",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#fff",
+    "version": "1.0.0",
+    "theme_color": "#fff",
+    "icons": [
+        {
+            "src": "/assets/icons/favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/assets/icons/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/icons/android-chrome-256x256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/assets/icons/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
