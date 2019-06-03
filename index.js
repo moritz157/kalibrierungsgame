@@ -91,7 +91,7 @@ function step(i = 0) {
         mark.classList.remove("green")
         mark.classList.remove("show")
 
-        playSound("./assets/pling.mp3")
+        playSound("./assets/ding.mp3")
 
         tempPrecision.push(calculateClickPrecision(e))
 
