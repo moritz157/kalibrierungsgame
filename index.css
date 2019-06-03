@@ -15,6 +15,7 @@ body {
     width: 100%;
     text-align: center;
     top: 30%;
+    font-size: 3vh;
 }
 
 #main .markers-wrapper {
@@ -33,9 +34,10 @@ body {
 }
 
 .marker {
-    width: 30px;
-    height: 30px;
+    width: 12vh;
+    height: 12vh;
     background-image: url('./assets/marker_red.png');
+    background-size: cover;
 }
 
 .marker.green {

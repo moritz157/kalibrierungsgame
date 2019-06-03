@@ -72,7 +72,7 @@ function countdownStep(){
 function start(){
     markerIndex = 0;
     $($(".marker")[0]).removeClass("hide");
-    $("#top-text").html("Drücken Sie auf den Mittelpunkt des Ziel und lassen Sie los");
+    $("#top-text").html("Drücken Sie auf den Mittelpunkt des Ziels und lassen Sie los");
     gameState = 1;
     startTimestamp = Date.now();
 }
