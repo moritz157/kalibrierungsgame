@@ -1,0 +1,36 @@
+<html lang="de">
+
+    <head>
+        <title>Fachwortbuzzer - Made by UB</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#2196f3">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="/assets/favicon.ico">
+    </head>
+
+    <body>
+        
+        <main>
+            <div id="buzzer-wrapper">
+                <div id="buzzer">
+
+                </div>
+            </div>
+        </main>
+
+        <script src="index.js"></script>
+        <script src="googleAnalytics.js"></script>
+    </body>
+
+    <script>
+    
+    document.getElementById("buzzer").addEventListener("click", () => {
+        var audio = new Audio("./assets/fachwort.mp3")
+        audio.play()
+    })
+    
+    </script>
+</html>
