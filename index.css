@@ -35,12 +35,14 @@ body {
 }
 
 .marker {
-    width: 12vh;
-    height: 12vh;
+    width: 10vh;
+    height: 10vh;
+    max-width: 128px;
+    max-height: 128px;
     opacity: 0;
     background-image: url('./assets/marker_red.png');
     background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .marker.green {
