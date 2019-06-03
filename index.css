@@ -16,6 +16,7 @@ body {
     text-align: center;
     top: 30%;
     font-size: 3vh;
+    z-index: 1;
 }
 
 #main .markers-wrapper {
@@ -36,16 +37,18 @@ body {
 .marker {
     width: 12vh;
     height: 12vh;
+    opacity: 0;
     background-image: url('./assets/marker_red.png');
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .marker.green {
     background-image: url('./assets/marker_green.png');
 }
 
-.marker.hide {
-    background: none;
+.marker.show {
+    opacity: 1;
 }
 
 #countdown {
@@ -56,4 +59,9 @@ body {
     top: 38%;
     text-align: center;
     width: 100%;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
 }
