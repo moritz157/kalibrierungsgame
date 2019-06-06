@@ -67,7 +67,7 @@ function end() {
 
     let clickPrecisions = [];
     for(let click of tempPrecision) { clickPrecisions.push(click.off_diagonal) }
-    sendData('', time, clickPrecisions);
+    sendData('-', time, clickPrecisions);
 }
 
 /**
